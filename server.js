@@ -1,35 +1,14 @@
+require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
-const { Configuration, OpenAIApi } = require('openai');
+const path = require('path');
+const { handler } = require('./netlify/functions/chat');
 
+require('./build');
 const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// OpenAI Configuration
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+app.use(express.json({ limit: '16kb' }));
+app.post('/api/chat', async (req, res) => {
+  const result = await handler({ httpMethod: 'POST', body: JSON.stringify(req.body) });
+  res.status(result.statusCode).type('json').send(result.body);
 });
-const openai = new OpenAIApi(configuration);
-
-// Chat endpoint
-app.post('/chat', async (req, res) => {
-  try {
-    const response = await openai.createChatCompletion({
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: req.body.query }],
-    });
-    res.json(response.data);
-  } catch (error) {
-    console.error('Error communicating with OpenAI:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.use(express.static(path.join(__dirname, 'dist')));
+app.listen(process.env.PORT || 3000, () => console.log('Servidor listo'));
