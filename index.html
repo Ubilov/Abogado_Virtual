@@ -1,203 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>legal</title>
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#002244">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="preload" href="css/stylus.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link href="css/stylus.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abogado Virtual Paraguay</title>
+<meta name="theme-color" content="#061a2d">
+<style>
+:root{--navy:#061a2d;--navy2:#0b2f4d;--gold:#d9a84e;--gold2:#f0c76f;--white:#f7f3ea;--muted:#b8c3cc}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 70% 40%,#173b55 0,#071b2d 35%,#030c14 100%);color:var(--white);font-family:Inter,system-ui,Arial;overflow-x:hidden}body:after{content:"";position:fixed;left:0;right:0;bottom:0;height:8px;background:linear-gradient(#d0182e 0 33.3%,#fff 33.3% 66.6%,#1e5aa8 66.6%);z-index:10}header{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,72px);border-bottom:1px solid #ffffff18;position:relative;z-index:3}.brand{display:flex;gap:13px;align-items:center;font-family:Georgia,serif}.brand i{font-style:normal;font-size:30px;color:var(--gold2)}.brand strong{font-size:21px}.brand small{display:block;color:var(--gold2);letter-spacing:.2em}.login{border:1px solid #f0c76f99;border-radius:999px;padding:10px 17px;color:var(--gold2);background:#ffffff05;cursor:pointer;font-weight:800}main{min-height:calc(100vh - 74px);display:grid;grid-template-columns:1.05fr .95fr;gap:25px;align-items:center;padding:42px clamp(22px,6vw,90px) 70px}.copy{max-width:650px}.eyebrow{color:var(--gold2);font-weight:800;font-size:12px;letter-spacing:.25em;text-transform:uppercase}h1{font:700 clamp(50px,6.6vw,96px)/.88 Georgia,serif;letter-spacing:-.045em;margin:18px 0 20px}h1 em{font-style:normal;color:var(--gold2)}.lead{font-size:clamp(17px,1.8vw,21px);line-height:1.6;color:#d5dee5;max-width:560px}.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.badges span{border:1px solid #ffffff20;background:#ffffff08;border-radius:999px;padding:8px 12px;color:#dbe4e9;font-size:13px}.stage{min-height:540px;display:flex;justify-content:center;align-items:center;perspective:1200px}.gavel-wrap{width:min(520px,90vw);height:465px;position:relative;display:flex;justify-content:center;align-items:flex-end;cursor:pointer;user-select:none;outline:none}.glow{position:absolute;left:50%;bottom:82px;transform:translateX(-50%);width:330px;height:130px;border-radius:50%;background:radial-gradient(circle,#f0c76f75,#d9a84e17 50%,transparent 72%);filter:blur(18px)}.base{position:absolute;bottom:60px;width:330px;height:78px;border-radius:50% 50% 22px 22px;background:linear-gradient(#422717,#130b06 62%,#080503);border:2px solid #f0c76f3d;box-shadow:0 25px 45px #0008,inset 0 8px 12px #fff1}.base:after{content:"⚖";position:absolute;inset:0;display:grid;place-items:center;color:var(--gold2);font-size:35px}.gavel{position:absolute;width:350px;height:245px;bottom:112px;left:50%;transform-origin:78% 76%;transform:translateX(-50%) rotate(-26deg);filter:drop-shadow(0 28px 22px #0008)}.gavel svg{width:100%;height:100%;overflow:visible}.gavel-wrap.hit .gavel{animation:hammer .76s cubic-bezier(.18,.74,.16,1)}.gavel-wrap.hit .base{animation:impact .42s .44s}.gavel-wrap.hit .glow{animation:flash .46s .4s}.tap{position:absolute;bottom:3px;background:#04111ed9;border:1px solid #f0c76f66;border-radius:999px;padding:11px 16px;animation:pulse 2s infinite}.tap strong{color:var(--gold2)}.particle{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--gold2);bottom:126px;left:50%;pointer-events:none;box-shadow:0 0 12px var(--gold2);animation:spark .72s ease-out forwards}@keyframes hammer{0%{transform:translateX(-50%) rotate(-26deg)}22%{transform:translateX(-50%) translateY(-45px) rotate(-52deg)}66%{transform:translateX(-50%) translateY(20px) rotate(6deg)}78%{transform:translateX(-50%) translateY(14px) rotate(2deg)}100%{transform:translateX(-50%) rotate(-26deg)}}@keyframes impact{20%{transform:translate(-5px,2px)}40%{transform:translate(6px,-1px)}60%{transform:translate(-3px)}}@keyframes flash{35%{opacity:1;transform:translateX(-50%) scale(1.45)}}@keyframes pulse{50%{transform:translateY(-4px)}}@keyframes spark{to{transform:translate(var(--x),var(--y)) scale(.1);opacity:0}}.modal{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:20px;background:#000a;backdrop-filter:blur(13px);opacity:0;visibility:hidden;transition:.25s}.modal.open{opacity:1;visibility:visible}.panel{width:min(510px,96vw);max-height:92vh;overflow:auto;border-radius:24px;padding:30px;background:linear-gradient(#0b2a45,#061724);border:1px solid #f0c76f40;box-shadow:0 30px 80px #000b;transform:translateY(25px) scale(.97);transition:.28s;position:relative}.modal.open .panel{transform:none}.close{position:absolute;right:17px;top:12px;border:0;background:transparent;color:#e8eef2;font-size:30px;cursor:pointer}.panel h2{font:700 36px/1 Georgia,serif;margin:5px 0 8px}.panel>p{color:var(--muted);margin:0 0 20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field.full{grid-column:1/-1}label{font-size:12px;color:#dbe3e8}input,select{width:100%;margin-top:6px;border:1px solid #ffffff22;background:#0c2941;color:#fff;border-radius:11px;padding:13px;outline:none}input:focus,select:focus{border-color:var(--gold2);box-shadow:0 0 0 3px #f0c76f1c}.consent{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#cfd9df}.consent input{width:auto;margin-top:2px}.submit{grid-column:1/-1;width:100%;border:0;border-radius:11px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#16100a;padding:14px;font-weight:900;font-size:15px;cursor:pointer}.response{grid-column:1/-1;font-size:13px;min-height:18px}.response.error{color:#ffb3b3}.response.ok{color:#b8f2cd}.privacy{font-size:11px!important;text-align:center;margin-top:13px!important}.skip{display:block;margin:12px auto 0;border:0;background:transparent;color:#c9d2d8;text-decoration:underline;cursor:pointer}@media(max-width:850px){main{grid-template-columns:1fr;text-align:center;padding-top:30px}.copy{margin:auto}.lead{margin:auto}.badges{justify-content:center}.stage{min-height:450px}h1{font-size:clamp(50px,15vw,78px)}}@media(max-width:520px){.grid{grid-template-columns:1fr}.field.full,.submit,.response{grid-column:auto}.panel{padding:25px 20px}.brand small{display:none}}
+</style>
 </head>
 <body>
-<header>
-  <h1>Abogado Virtual</h1>
-  <h2>Estudio Jurídico</h2>
-</header>
-
-<nav>
-  <a href="#inicio">INICIO</a>
-  <a href="#quienes-somos">QUIÉNES SOMOS</a>
-  <a href="#servicios">SERVICIOS</a>
-  <a href="#contacto">CONTACTO</a>
-  <a href="#blog">BLOG</a>
-  <a href="#consulta-virtual">CONSULTA VIRTUAL</a>
-  <a href="#interes-publico">INTERÉS PÚBLICO</a>
-</nav>
-
-<img src="Hero.jpg" alt="">
-
-<main class="pagina">
-  <section id="inicio">
-    <h2>Servicios de consultas y respuestas legales</h2>
-  </section>
-
-  <section id="quienes-somos" class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3>¿Quiénes Somos?</h3>
-      <p>Somos un estudio jurídico comprometido con la innovación y el acceso universal al derecho. Nos enfocamos en brindar asesoría legal moderna, eficiente y cercana, utilizando herramientas digitales para acompañarte donde sea que estés.</p>
-    </div>
-  </section>
-
-  <section class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3><a href="civil-comercial.html">Civil y Comercial</a></h3>
-      <p>Hacé clic para ver información detallada sobre esta rama del derecho.</p>
-    </div>
-  </section>
-
-
-
-  <section class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3><a href="penal.html">Penal</a></h3>
-      <p>Hacé clic para ver información detallada sobre esta rama del derecho.</p>
-    </div>
-  </section>
-
-
-
-  <section class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3><a href="laboral.html">Laboral</a></h3>
-      <p>Hacé clic para ver información detallada sobre esta rama del derecho.</p>
-    </div>
-  </section>
-
-
-
-  <section class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3><a href="ninez-adolescencia.html">Niñez y Adolescencia</a></h3>
-      <p>Hacé clic para ver información detallada sobre esta rama del derecho.</p>
-    </div>
-  </section>
-
-
-
-  <section class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3><a href="administrativo.html">Administrativo</a></h3>
-      <p>Hacé clic para ver información detallada sobre esta rama del derecho.</p>
-    </div>
-  </section>
-
-
-  <section id="blog" class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3>Blog</h3>
-      <p>Leé nuestros artículos legales sobre derechos, reformas, consejos útiles y temas de actualidad jurídica. Convertite en un ciudadano informado y consciente de tus derechos.</p>
-    </div>
-  </section>
-
-  <section id="consulta-virtual" class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3>Consulta Virtual</h3>
-      <p>Consultá a nuestro abogado virtual impulsado por IA.</p>
-      <textarea id="pregunta" placeholder="Escribí tu consulta legal..." rows="4" style="width:100%; margin-bottom:1rem;"></textarea>
-      <button id="enviar-consulta" type="button">Enviar consulta</button>
-      <div id="respuesta" style="margin-top:1rem; background:#f1f1f1; padding:1rem; border-radius:8px;"></div>
-    </div>
-  </section>
-
-  <section id="interes-publico" class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3>Información de Interés Público</h3>
-      <p>Accedé a recursos oficiales y entidades clave del Estado Paraguayo:</p>
-      <ul>
-        <li><a href="https://www.pj.gov.py/" target="_blank">Corte Suprema de Justicia</a></li>
-        <li><a href="https://www.mtess.gov.py/" target="_blank">Ministerio de Trabajo</a></li>
-        <li><a href="https://www.policia.gov.py/" target="_blank">Policía Nacional</a></li>
-        <li><a href="https://www.congreso.gov.py/" target="_blank">Congreso Nacional</a></li>
-      </ul>
-    </div>
-  </section>
-
-
-  <section id="noticias" class="seccion-legal">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3>Noticias Jurídicas</h3>
-      <ul>
-        <li><a href="https://www.pj.gov.py/notas/0" target="_blank">Corte Suprema de Justicia - Últimas novedades</a></li>
-        <li><a href="https://www.abc.com.py/nacionales/justicia/" target="_blank">Justicia - ABC Color</a></li>
-        <li><a href="https://www.lanacion.com.py/judiciales/" target="_blank">Judiciales - La Nación</a></li>
-        <li><a href="https://www.ultimahora.com/judiciales" target="_blank">Sección Judiciales - Última Hora</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contacto" class="seccion-legal" style="width: 50%; margin-left: 0;">
-    <div class="banda-lateral"></div>
-    <div class="contenido-seccion">
-      <h3>Contacto</h3>
-      <form action="">
-        <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" placeholder="Nombre y Apellido" id="nombre" name="nombre" required>
-        </div>
-
-        <div class="form-group">
-          <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
-        </div>
-
-        <div class="form-actions">
-          <input type="submit" value="Enviar">
-          <input type="reset" value="Borrar">
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <p>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-      <path d="M12 9.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0"></path>
-      <path d="M6.428 12.494l7.314 -9.252"></path>
-      <path d="M10.002 7.935l-2.937 -2.545"></path>
-      <path d="M17.693 6.593l-8.336 9.979"></path>
-      <path d="M17.591 6.376c.472 .907 .715 1.914 .709 2.935a7.263 7.263 0 0 1 -.72 3.18a19.085 19.085 0 0 1 -2.089 3c-.784 .933 -1.49 1.93 -2.11 2.98c-.314 .62 -.568 1.27 -.757 1.938c-.121 .36 -.277 .591 -.622 .591c-.315 0 -.463 -.136 -.626 -.593a10.595 10.595 0 0 0 -.779 -1.978a18.18 18.18 0 0 0 -1.423 -2.091c-.877 -1.184 -2.179 -2.535 -2.853 -4.071a7.077 7.077 0 0 1 -.621 -2.967a6.226 6.226 0 0 1 1.476 -4.055a6.25 6.25 0 0 1 4.811 -2.245a6.462 6.462 0 0 1 1.918 .284a6.255 6.255 0 0 1 3.686 3.092z"></path>
-    </svg>
-  </p>
-  <div id="respuesta-contacto"></div>
-
-  <p>Asunción - Paraguay</p>
-  <a href="#contacto">CONTACTO</a>
-</main>
-
-<footer>
-  <p>Todos los Derechos reservados - Abogado Virtual</p>
-</footer>
-
-<script src="/chat.js" defer></script>
+<header><div class="brand"><i>⚖</i><div><strong>Abogado Virtual</strong><small>PARAGUAY</small></div></div><button class="login" id="enterDirect">Ingresar</button></header>
+<main><section class="copy"><div class="eyebrow">Tecnología legal al servicio de las personas</div><h1>Tu defensa.<br><em>Tu derecho.</em><br>Tu abogado.</h1><p class="lead">Orientación jurídica inteligente sobre legislación paraguaya, análisis de documentos, historial de consultas y elaboración de escritos en un solo lugar.</p><div class="badges"><span>🇵🇾 Paraguay</span><span>📄 Analiza archivos</span><span>✍️ Escritos jurídicos</span><span>⚖️ 7 áreas legales</span></div></section><section class="stage"><div class="gavel-wrap" id="gavelButton" role="button" tabindex="0" aria-label="Golpear el mazo para registrarse"><div class="glow"></div><div class="base"></div><div class="gavel"><svg viewBox="0 0 520 360" aria-hidden="true"><defs><linearGradient id="wood" x1="0" x2="1"><stop stop-color="#2a1208"/><stop offset=".25" stop-color="#7a421f"/><stop offset=".55" stop-color="#3b1b0c"/><stop offset=".8" stop-color="#8e5427"/><stop offset="1" stop-color="#241005"/></linearGradient><linearGradient id="gold" x1="0" x2="1"><stop stop-color="#9f6b20"/><stop offset=".45" stop-color="#f0c76f"/><stop offset=".7" stop-color="#b47b27"/><stop offset="1" stop-color="#f3d68a"/></linearGradient></defs><g transform="translate(55 45) rotate(15 230 130)"><rect x="170" y="120" width="290" height="34" rx="17" fill="url(#wood)"/><rect x="144" y="76" width="122" height="128" rx="31" fill="url(#wood)"/><rect x="162" y="91" width="86" height="98" rx="20" fill="url(#gold)"/><rect x="116" y="90" width="54" height="100" rx="22" fill="url(#wood)"/><rect x="240" y="90" width="54" height="100" rx="22" fill="url(#wood)"/><path d="M175 101 Q205 79 240 101" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="5"/></g></svg></div><div class="tap">🔨 <strong>Tocá el mazo</strong> para comenzar</div></div></section></main>
+<div class="modal" id="registerModal" aria-hidden="true"><div class="panel" role="dialog" aria-modal="true"><button class="close" id="closeModal" aria-label="Cerrar">×</button><h2>Crear acceso</h2><p>Un registro simple para personalizar tu experiencia. No te pedimos contraseña hasta implementar autenticación real.</p><form name="registro-acceso" method="POST" data-netlify="true" id="registerForm"><input type="hidden" name="form-name" value="registro-acceso"><div class="grid"><div class="field"><label>Nombre<input name="nombre" autocomplete="given-name" required></label></div><div class="field"><label>Apellido<input name="apellido" autocomplete="family-name" required></label></div><div class="field full"><label>Correo electrónico<input name="email" type="email" autocomplete="email" required></label></div><div class="field"><label>Teléfono<input name="telefono" inputmode="tel" autocomplete="tel" placeholder="+595 9xx xxx xxx"></label></div><div class="field"><label>Perfil<select name="perfil" required><option value="">Seleccioná</option><option>Abogado/a</option><option>Estudiante de Derecho</option><option>Público en general</option></select></label></div><div class="field full consent"><input type="checkbox" id="consent" name="acepta_privacidad" required><label for="consent">Acepto el tratamiento de los datos enviados para gestionar mi acceso y consultas.</label></div><button class="submit" type="submit">Ingresar a Abogado Virtual →</button><div class="response" id="formResponse"></div></div></form><button class="skip" id="skipButton" type="button">Ya me registré · ingresar</button><p class="privacy">🔒 Evitá cargar contraseñas, datos bancarios o información personal innecesaria.</p></div></div>
 <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(() => console.log('🛡️ Service Worker registrado'))
-      .catch((error) => console.error('Service Worker error:', error));
-  }
-
-
+const KEY='abogado-virtual-registration-v2',gavel=document.getElementById('gavelButton'),modal=document.getElementById('registerModal'),form=document.getElementById('registerForm'),resp=document.getElementById('formResponse');
+function go(){location.href='app.html'}
+function sparks(){for(let i=0;i<18;i++){const p=document.createElement('span');p.className='particle';const a=Math.PI*2/18*i+Math.random()*.25,d=70+Math.random()*115;p.style.setProperty('--x',Math.cos(a)*d+'px');p.style.setProperty('--y',(Math.sin(a)*d-45)+'px');gavel.appendChild(p);setTimeout(()=>p.remove(),800)}}
+function openReg(hit=true){if(hit){if(gavel.classList.contains('hit'))return;gavel.classList.add('hit');setTimeout(sparks,430);if('vibrate'in navigator)navigator.vibrate([35,25,65]);setTimeout(()=>modal.classList.add('open'),650);setTimeout(()=>gavel.classList.remove('hit'),900)}else modal.classList.add('open')}
+gavel.onclick=()=>openReg(true);gavel.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openReg(true)}};document.getElementById('closeModal').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};document.getElementById('enterDirect').onclick=()=>localStorage.getItem(KEY)?go():openReg(false);document.getElementById('skipButton').onclick=go;document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+form.addEventListener('submit',async e=>{e.preventDefault();resp.className='response';resp.textContent='Guardando…';const data=new FormData(form);try{const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()});if(!r.ok)throw Error();localStorage.setItem(KEY,JSON.stringify({name:data.get('nombre'),profile:data.get('perfil'),registeredAt:new Date().toISOString()}));resp.className='response ok';resp.textContent='Registro completado. Ingresando…';setTimeout(go,450)}catch{resp.className='response error';resp.textContent='No se pudo completar el registro. Verificá tu conexión e intentá de nuevo.'}});
+if(localStorage.getItem(KEY)&&new URLSearchParams(location.search).get('entrar')==='1')go();
 </script>
-</body>
-</html>
+</body></html>
